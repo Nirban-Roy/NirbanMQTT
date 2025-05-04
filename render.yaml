@@ -1,10 +1,9 @@
 services:
-  - type: web
+  - type: web             # HTTP & WSS routing
     name: NirbanMQTT
-    runtime: docker       # build from your Dockerfile
+    runtime: docker       # build via your Dockerfile
     plan: free
     dockerfilePath: Dockerfile
     envVars:
-      # Make Render route incoming traffic on port 9001
-      - key: PORT
+      - key: PORT         # route external 443 → container 9001
         value: "9001"
