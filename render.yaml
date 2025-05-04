@@ -1,7 +1,6 @@
 services:
-  - type: web
+  - type: worker  # Best for MQTT broker
     name: NirbanMQTT
     env: docker
     plan: free
-    ports:
-      - 8080
+    dockerfilePath: Dockerfile
