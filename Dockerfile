@@ -1,7 +1,7 @@
 FROM eclipse-mosquitto:latest
 
-# Replace default config
+# Copy in your (properly formatted) Mosquitto config
 COPY mosquitto.conf /mosquitto/config/mosquitto.conf
 
-# (Optional) tell Docker which ports the container listens on
+# Expose both the raw MQTT port and the WebSockets port
 EXPOSE 1883 9001
