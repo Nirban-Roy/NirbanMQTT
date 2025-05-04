@@ -1,6 +1,4 @@
-FROM eclipse-mosquitto
+FROM eclipse-mosquitto: latest
 
 COPY mosquitto.conf /mosquitto/config/mosquitto.conf
-
-EXPOSE 8080
 
