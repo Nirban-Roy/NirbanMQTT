@@ -1,6 +1,10 @@
 services:
-  - type: worker  # Best for MQTT broker
+  - type: web
     name: NirbanMQTT
-    env: docker
+    runtime: docker       # build from your Dockerfile
     plan: free
     dockerfilePath: Dockerfile
+    envVars:
+      # Make Render route incoming traffic on port 9001
+      - key: PORT
+        value: "9001"
