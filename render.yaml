@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: NirbanMQTT
+    env: docker
+    plan: free
+    ports:
+      - 8080
